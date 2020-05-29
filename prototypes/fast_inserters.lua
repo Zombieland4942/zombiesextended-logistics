@@ -8,7 +8,7 @@ for x, fast_inserter in pairs(fast_inserters) do
     item = util.table.deepcopy(item_base)
 
     entity.name = fast_inserter.name    
-    --entity.icon = "__darkstar-logistics__/graphics/icons/" .. fast_inserter.name .. ".png"
+    entity.icon = "__darkstar-logistics__/graphics/icons/" .. fast_inserter.name .. ".png"
     entity.minable.result = fast_inserter.name
     entity.max_health = fast_inserter.health  
     entity.rotation_speed  = fast_inserter.speed
@@ -16,8 +16,17 @@ for x, fast_inserter in pairs(fast_inserters) do
     entity.energy_per_rotation = fast_inserter.energy_KJ .. "KJ"
     entity.energy_source.drain = fast_inserter.energy_drain_kw .. "kW"
         
+    entity.hand_base_picture.filename = "__darkstar-logistics__/graphics/entity/" .. fast_inserter.name .. "/inserter-hand-base.png"
+    entity.hand_base_picture.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. fast_inserter.name .. "/hr-inserter-hand-base.png"
+    entity.hand_closed_picture.filename = "__darkstar-logistics__/graphics/entity/" .. fast_inserter.name .. "/inserter-hand-closed.png"
+    entity.hand_closed_picture.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. fast_inserter.name .. "/hr-inserter-hand-closed.png"
+    entity.hand_open_picture.filename = "__darkstar-logistics__/graphics/entity/" .. fast_inserter.name .. "/inserter-hand-open.png"
+    entity.hand_open_picture.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. fast_inserter.name .. "/hr-inserter-hand-open.png"
+    entity.platform_picture.sheet.filename = "__darkstar-logistics__/graphics/entity/" .. fast_inserter.name .. "/inserter-platform.png"
+    entity.platform_picture.sheet.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. fast_inserter.name .. "/hr-inserter-platform.png"
+
     item.name = fast_inserter.name
-    --item.icon = "__darkstar-logistics__/graphics/icons/" .. fast_inserter.name .. ".png"
+    item.icon = "__darkstar-logistics__/graphics/icons/" .. fast_inserter.name .. ".png"
     item.place_result = fast_inserter.name
     item.order = fast_inserter.order
     item.subgroup = "ds-inserters"
