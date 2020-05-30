@@ -16,3 +16,7 @@ require("prototypes.stack_long_inserters")
 require("prototypes.storage_tanks")
 require("prototypes.chests")
 require("prototypes.offshore_pumps")
+
+require("prototypes.locomotives")
+require("prototypes.cargo_wagons")
+require("prototypes.fluid_wagons")
