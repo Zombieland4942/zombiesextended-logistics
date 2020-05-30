@@ -50,5 +50,15 @@ stack_long_inserters = {
 }
 
 chests = {
-    { order = "a-g", name = "chest-mk1", health = 180, inventory_size = 3 },
+    { order = "a-a", name = "chest-mk1", health = 180, inventory_size = 90 },
+}
+
+storage_tanks = {
+    { order = "a-b", name = "store-tank-mk1", health = 600, fluid_size = 1000 },
+    { order = "a-c", name = "store-tank-mk2", health = 800, fluid_size = 3000 },
+}
+
+offshore_pumps = {
+    { order = "c-a", name = "offshore-pump-mk1", health = 150, pumping_size = 40 },
+    { order = "c-b", name = "offshore-pump-mk2", health = 300, pumping_size = 60 },
 }

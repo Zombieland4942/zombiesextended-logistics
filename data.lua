@@ -12,3 +12,7 @@ require("prototypes.fastlong_inserters")
 require("prototypes.stack_inserters")
 require("prototypes.stack_filter_inserters")
 require("prototypes.stack_long_inserters")
+
+require("prototypes.storage_tanks")
+require("prototypes.chests")
+require("prototypes.offshore_pumps")
