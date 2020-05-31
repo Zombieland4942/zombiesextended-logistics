@@ -20,3 +20,8 @@ require("prototypes.offshore_pumps")
 require("prototypes.locomotives")
 require("prototypes.cargo_wagons")
 require("prototypes.fluid_wagons")
+
+require("prototypes.logistic_robots")
+require("prototypes.construction_robots")
+require("prototypes.roboports")
+require("prototypes.logistic_containers")

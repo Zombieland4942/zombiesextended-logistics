@@ -77,3 +77,26 @@ fluid_wagons = {
     { order = "c-a", name = "fluid-wagon-mk1", health = 1200, capacity = 50000, weight = 800, max_speed = 1.7, breaking_force = 4 },
     { order = "c-b", name = "fluid-wagon-mk2", health = 2400, capacity = 100000, weight = 600, max_speed = 1.9, breaking_force = 5 },
 }
+
+logistic_robots = {
+    { order = "a-a", name = "logistic-robot-mk1", health = 100, max_payload_size = 2, speed = 0.1, max_energy_mj = 3, energy_per_move_kj = 10 },
+    { order = "a-b", name = "logistic-robot-mk2", health = 200, max_payload_size = 4, speed = 0.2, max_energy_mj = 6, energy_per_move_kj = 15 },
+}
+
+construction_robots = {    
+    { order = "b-a", name = "construction-robot-mk1", health = 100, max_payload_size = 2, speed = 0.12, max_energy_mj = 3, energy_per_move_kj = 10 },
+    { order = "b-b", name = "construction-robot-mk2", health = 200, max_payload_size = 4, speed = 0.24, max_energy_mj = 6, energy_per_move_kj = 15 },
+}
+
+logistic_containers ={
+    { order = "c-a", name = "large-logistic-container-active-provider", type = "active-provider", health = 500, inventory_size = 90 },
+    { order = "c-b", name = "large-logistic-container-passive-provider", type = "passive-provider", health = 500, inventory_size = 90 },    
+    { order = "c-c", name = "large-logistic-container-storage", type = "storage", health = 500, inventory_size = 90 },
+    { order = "c-d", name = "large-logistic-container-buffer", type = "buffer", health = 500, inventory_size = 90 },
+    { order = "c-e", name = "large-logistic-container-requester", type = "requester", health = 500, inventory_size = 90 },
+}
+
+roboports = {
+    { order = "a-a", name = "roboport-mk1", health = 1000, recharging_count = 2, input_MW = 16, buffer_MJ = 400, recharge_minimum_MJ = 80, energy_usage_KW = 100, charging_energy_KW = 2000, logistics_radius = 50, construction_radius = 110 },
+    { order = "a-b", name = "roboport-mk2", health = 2000, recharging_count = 4, input_MW = 64, buffer_MJ = 800, recharge_minimum_MJ = 160, energy_usage_KW = 200, charging_energy_KW = 4000, logistics_radius = 100, construction_radius = 220 },
+}
