@@ -35,5 +35,14 @@ for x, underground_belt in pairs(underground_belts) do
     item.order = underground_belt.order
     item.subgroup = "ds-belt"
 
-    data:extend({ entity, item })
+    table.insert(data.raw["technology"][underground_belt.technology].effects, { type = "unlock-recipe", recipe = underground_belt.name })
+
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = underground_belt.name,
+        enabled = false,
+        ingredients = underground_belt.ingredients,
+        result = underground_belt.name
+    }})
 end

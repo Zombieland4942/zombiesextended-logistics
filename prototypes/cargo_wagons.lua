@@ -21,6 +21,15 @@ for x, cargo_wagon in pairs(cargo_wagons) do
     item.place_result = cargo_wagon.name
     item.order = cargo_wagon.order
     item.subgroup = "ds-trains"
+    
+    table.insert(data.raw["technology"][cargo_wagon.technology].effects, { type = "unlock-recipe", recipe = cargo_wagon.name })
 
-    data:extend({ entity, item })
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = cargo_wagon.name,
+        enabled = false,
+        ingredients = cargo_wagon.ingredients,
+        result = cargo_wagon.name
+    }})
 end

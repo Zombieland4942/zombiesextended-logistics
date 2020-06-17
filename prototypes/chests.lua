@@ -18,6 +18,15 @@ for x, chest in pairs(chests) do
     item.place_result = chest.name
     item.order = chest.order
     item.subgroup = "ds-storage"
+    
+    table.insert(data.raw["technology"][chest.technology].effects, { type = "unlock-recipe", recipe = chest.name })
 
-    data:extend({ entity, item })
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = chest.name,
+        enabled = false,
+        ingredients = chest.ingredients,
+        result = chest.name
+    }})
 end

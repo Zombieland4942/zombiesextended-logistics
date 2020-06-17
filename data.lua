@@ -1,4 +1,5 @@
 require("configuration")
+require("prototypes.technologies")
 
 require("prototypes.belt_animation_set")
 require("prototypes.transport_belts")

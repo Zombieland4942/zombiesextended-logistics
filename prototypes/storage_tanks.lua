@@ -19,5 +19,14 @@ for x, storage_tank in pairs(storage_tanks) do
     item.order = storage_tank.order
     item.subgroup = "ds-storage"
 
-    data:extend({ entity, item })
+    table.insert(data.raw["technology"][storage_tank.technology].effects, { type = "unlock-recipe", recipe = storage_tank.name })
+
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = storage_tank.name,
+        enabled = false,
+        ingredients = storage_tank.ingredients,
+        result = storage_tank.name
+    }})
 end

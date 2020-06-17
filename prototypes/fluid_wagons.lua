@@ -22,5 +22,14 @@ for x, fluid_wagon in pairs(fluid_wagons) do
     item.order = fluid_wagon.order
     item.subgroup = "ds-trains"
 
-    data:extend({ entity, item })
+    table.insert(data.raw["technology"][fluid_wagon.technology].effects, { type = "unlock-recipe", recipe = fluid_wagon.name })
+
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = fluid_wagon.name,
+        enabled = false,
+        ingredients = fluid_wagon.ingredients,
+        result = fluid_wagon.name
+    }})
 end

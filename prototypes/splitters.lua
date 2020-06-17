@@ -36,6 +36,15 @@ for x, splitter in pairs(splitters) do
     item.place_result = splitter.name
     item.order = splitter.order
     item.subgroup = "ds-belt"
+    
+    table.insert(data.raw["technology"][splitter.technology].effects, { type = "unlock-recipe", recipe = splitter.name })
 
-    data:extend({ entity, item })
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = splitter.name,
+        enabled = false,
+        ingredients = splitter.ingredients,
+        result = splitter.name
+    }})
 end

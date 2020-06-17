@@ -25,5 +25,14 @@ for x, transport_belt in pairs(transport_belts) do
     item.order = transport_belt.order
     item.subgroup = "ds-belt"
 
-    data:extend({ entity, item })
+    table.insert(data.raw["technology"][transport_belt.technology].effects, { type = "unlock-recipe", recipe = transport_belt.name })
+
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = transport_belt.name,
+        enabled = false,
+        ingredients = transport_belt.ingredients,
+        result = transport_belt.name
+    }})
 end

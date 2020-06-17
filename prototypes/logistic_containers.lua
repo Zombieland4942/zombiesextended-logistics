@@ -21,5 +21,14 @@ for x, logistic_container in pairs(logistic_containers) do
     item.order = logistic_container.order
     item.subgroup = "ds-robots"
 
-    data:extend({ entity, item })
+    table.insert(data.raw["technology"][logistic_container.technology].effects, { type = "unlock-recipe", recipe = logistic_container.name })
+
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = logistic_container.name,
+        enabled = false,
+        ingredients = logistic_container.ingredients,
+        result = logistic_container.name
+    }})
 end

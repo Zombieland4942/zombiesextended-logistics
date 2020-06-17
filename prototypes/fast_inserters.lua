@@ -31,5 +31,14 @@ for x, fast_inserter in pairs(fast_inserters) do
     item.order = fast_inserter.order
     item.subgroup = "ds-inserters"
 
-    data:extend({ entity, item })
+    table.insert(data.raw["technology"][fast_inserter.technology].effects, { type = "unlock-recipe", recipe = fast_inserter.name })
+
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = fast_inserter.name,
+        enabled = false,
+        ingredients = fast_inserter.ingredients,
+        result = fast_inserter.name
+    }})
 end

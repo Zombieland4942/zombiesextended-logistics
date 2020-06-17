@@ -22,6 +22,15 @@ for x, locomotive in pairs(locomotives) do
     item.place_result = locomotive.name
     item.order = locomotive.order
     item.subgroup = "ds-trains"
+    
+    table.insert(data.raw["technology"][locomotive.technology].effects, { type = "unlock-recipe", recipe = locomotive.name })
 
-    data:extend({ entity, item })
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = locomotive.name,
+        enabled = false,
+        ingredients = locomotive.ingredients,
+        result = locomotive.name
+    }})
 end

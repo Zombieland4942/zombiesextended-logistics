@@ -40,5 +40,14 @@ for x, roboport in pairs(roboports) do
     item.order = roboport.order
     item.subgroup = "ds-robotports"
 
-    data:extend({ entity, item })
+    table.insert(data.raw["technology"][roboport.technology].effects, { type = "unlock-recipe", recipe = roboport.name })
+
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = roboport.name,
+        enabled = false,
+        ingredients = roboport.ingredients,
+        result = roboport.name
+    }})
 end

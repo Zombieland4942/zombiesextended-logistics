@@ -33,5 +33,14 @@ for x, stack_long_inserter in pairs(stack_long_inserters) do
     item.order = stack_long_inserter.order
     item.subgroup = "ds-stackinserters"
 
-    data:extend({ entity, item })
+    table.insert(data.raw["technology"][stack_long_inserter.technology].effects, { type = "unlock-recipe", recipe = stack_long_inserter.name })
+
+    data:extend({ entity, item,
+    {
+        type = "recipe",
+        name = stack_long_inserter.name,
+        enabled = false,
+        ingredients = stack_long_inserter.ingredients,
+        result = stack_long_inserter.name
+    }})
 end
