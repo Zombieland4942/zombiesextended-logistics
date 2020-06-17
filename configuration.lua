@@ -78,8 +78,7 @@ chests = {
 }
 
 storage_tanks = {
-    { order = "a-b", name = "storage-tank-mk1", health = 600, fluid_size = 1000, ingredients = { {"vibranium-plate", 10} }, technology = "test_tech" },
-    { order = "a-c", name = "storage-tank-mk2", health = 1200, fluid_size = 3000, ingredients = { {"storage-tank-mk1", 3},{"vibranium-plate", 5} }, technology = "test_tech" },
+    { order = "a-b", name = "storage-tank-mk1", health = 1000, fluid_size = 1000, ingredients = { {"vibranium-plate", 20} }, technology = "test_tech" }
 }
 
 offshore_pumps = {
