@@ -87,13 +87,13 @@ locomotives = {
 }
 
 cargo_wagons = {
-    { order = "b-a", name = "cargo-wagon-mk1", health = 1200, cargo_size = 80, weight = 800, max_speed = 1.7, breaking_force = 4, ingredients = { {"cargo-wagon", 2},{"vibranium-plate", 7} }, technology = "high-teir-trains-mk1" },
-    { order = "b-b", name = "cargo-wagon-mk2", health = 2400, cargo_size = 160, weight = 600, max_speed = 1.9, breaking_force = 5, ingredients = { {"cargo-wagon-mk1", 2},{"vibranium-plate", 14} }, technology = "high-teir-trains-mk2" },
+    { order = "b-a", name = "cargo-wagon-mk1", health = 1200, cargo_size = 80, weight = 800, max_speed = 1.7, breaking_force = 4, equipment_grid = "xxl-equipment-grid", ingredients = { {"cargo-wagon", 2},{"vibranium-plate", 7} }, technology = "high-teir-trains-mk1" },
+    { order = "b-b", name = "cargo-wagon-mk2", health = 2400, cargo_size = 160, weight = 600, max_speed = 1.9, breaking_force = 5, equipment_grid = "xxxl-equipment-grid", ingredients = { {"cargo-wagon-mk1", 2},{"vibranium-plate", 14} }, technology = "high-teir-trains-mk2" },
 }
 
 fluid_wagons = {
-    { order = "c-a", name = "fluid-wagon-mk1", health = 1200, capacity = 50000, weight = 800, max_speed = 1.7, breaking_force = 4, ingredients = { {"fluid-wagon", 2},{"vibranium-plate", 7} }, technology = "high-teir-trains-mk1" },
-    { order = "c-b", name = "fluid-wagon-mk2", health = 2400, capacity = 100000, weight = 600, max_speed = 1.9, breaking_force = 5, ingredients = { {"fluid-wagon-mk1", 2},{"vibranium-plate", 14} }, technology = "high-teir-trains-mk2" },
+    { order = "c-a", name = "fluid-wagon-mk1", health = 1200, capacity = 50000, weight = 800, max_speed = 1.7, breaking_force = 4, equipment_grid = "xxl-equipment-grid", ingredients = { {"fluid-wagon", 2},{"vibranium-plate", 7} }, technology = "high-teir-trains-mk1" },
+    { order = "c-b", name = "fluid-wagon-mk2", health = 2400, capacity = 100000, weight = 600, max_speed = 1.9, breaking_force = 5, equipment_grid = "xxxl-equipment-grid", ingredients = { {"fluid-wagon-mk1", 2},{"vibranium-plate", 14} }, technology = "high-teir-trains-mk2" },
 }
 
 logistic_robots = {

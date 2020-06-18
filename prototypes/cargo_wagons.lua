@@ -14,7 +14,8 @@ for x, cargo_wagon in pairs(cargo_wagons) do
     entity.inventory_size = cargo_wagon.cargo_size
     entity.weight = cargo_wagon.weight
     entity.max_speed = cargo_wagon.max_speed    
-    entity.braking_force = cargo_wagon.breaking_force    
+    entity.braking_force = cargo_wagon.breaking_force  
+    entity.equipment_grid = cargo_wagon.equipment_grid  
     
     item.name = cargo_wagon.name
     item.icon = "__darkstar-logistics__/graphics/icons/" .. cargo_wagon.name .. ".png"

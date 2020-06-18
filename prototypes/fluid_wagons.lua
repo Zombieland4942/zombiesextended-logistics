@@ -15,6 +15,7 @@ for x, fluid_wagon in pairs(fluid_wagons) do
     entity.weight = fluid_wagon.weight
     entity.max_speed = fluid_wagon.max_speed    
     entity.braking_force = fluid_wagon.breaking_force    
+    entity.equipment_grid = fluid_wagon.equipment_grid
     
     item.name = fluid_wagon.name
     item.icon = "__darkstar-logistics__/graphics/icons/" .. fluid_wagon.name .. ".png"
