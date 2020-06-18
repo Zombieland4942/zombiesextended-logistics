@@ -82,8 +82,8 @@ offshore_pumps = {
 }
 
 locomotives = {
-    { order = "a-a", name = "locomotive-mk1", health = 1500, weight = 1500, max_speed = 1.4, max_power_kw = 800, breaking_force = 15, friction_force = 0.4, ingredients = { {"locomotive", 2},{"complex-processing-unit", 10} }, technology = "high-teir-trains-mk1" },
-    { order = "a-b", name = "locomotive-mk2", health = 2000, weight = 1000, max_speed = 1.8, max_power_kw = 1600, breaking_force = 25, friction_force = 0.2, ingredients = { {"locomotive-mk1", 2},{"complex-processing-unit", 20} }, technology = "high-teir-trains-mk2" },
+    { order = "a-a", name = "locomotive-mk1", health = 1500, weight = 1500, max_speed = 1.4, max_power_kw = 800, breaking_force = 15, friction_force = 0.4, equipment_grid = "xxl-equipment-grid", ingredients = { {"locomotive", 2},{"complex-processing-unit", 10} }, technology = "high-teir-trains-mk1" },
+    { order = "a-b", name = "locomotive-mk2", health = 2000, weight = 1000, max_speed = 1.8, max_power_kw = 1600, breaking_force = 25, friction_force = 0.2, equipment_grid = "xxxl-equipment-grid", ingredients = { {"locomotive-mk1", 2},{"complex-processing-unit", 20} }, technology = "high-teir-trains-mk2" },
 }
 
 cargo_wagons = {

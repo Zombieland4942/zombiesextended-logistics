@@ -16,6 +16,7 @@ for x, locomotive in pairs(locomotives) do
     entity.max_power = locomotive.max_power_kw .. "kW"
     entity.braking_force = locomotive.breaking_force
     entity.friction_force = locomotive.friction_force
+    entity.equipment_grid = locomotive.equipment_grid
 
     item.name = locomotive.name
     item.icon = "__darkstar-logistics__/graphics/icons/" .. locomotive.name .. ".png"
