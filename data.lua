@@ -26,3 +26,6 @@ require("prototypes.logistic_robots")
 require("prototypes.construction_robots")
 require("prototypes.roboports")
 require("prototypes.logistic_containers")
+
+require("prototypes.pipes")
+require("prototypes.pipe_to_grounds")

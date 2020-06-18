@@ -1,5 +1,3 @@
-require ("pipe_covers")
-
 local entity_base = util.table.deepcopy(data.raw["storage-tank"]["storage-tank"])
 local item_base = util.table.deepcopy(data.raw["item"]["storage-tank"])
 
@@ -13,7 +11,7 @@ for x, storage_tank in pairs(storage_tanks) do
     entity.minable.result = storage_tank.name
     entity.max_health = storage_tank.health
     entity.fluid_box.base_area = storage_tank.fluid_size
-    entity.fluid_box.pipe_covers = darkpipecovers()
+    entity.fluid_box.pipe_covers = storage_tank.pipe_covers
 
     entity.pictures.picture.sheets[1].filename = "__darkstar-logistics__/graphics/entity/" .. storage_tank.name .. "/storage-tank.png"
     entity.pictures.picture.sheets[1].hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. storage_tank.name .. "/hr-storage-tank.png"

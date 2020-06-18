@@ -1,3 +1,5 @@
+require ("prototypes.pipe_covers")
+
 local science_t1 = {{"automation-science-pack",1}}
 local science_t2 = {{"automation-science-pack",1},{"logistic-science-pack",1}}
 local science_t3 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1}}
@@ -20,7 +22,8 @@ technologies = {
     { order = "a-a-a", name = "advanced-robots-mk1", count = 500, time = 60, prerequisite = {"complex-processing-unit","construction-robotics"}, ingredients = science_t4 },
     { order = "a-a-a", name = "advanced-robots-mk2", count = 1000, time = 60, prerequisite = {"advanced-robots-mk1"}, ingredients = science_t5 },   
 
-    { order = "a-a-a", name = "test_tech", count = 200, time = 60, prerequisite = {"effect-transmission"}, ingredients = science_t4 },
+    { order = "a-a-a", name = "fluid-handling-mk1", count = 200, time = 60, prerequisite = {"fluid-handling"}, ingredients = science_t3 },
+    { order = "a-a-a", name = "fluid-handling-mk2", count = 200, time = 60, prerequisite = {"fluid-handling-mk1"}, ingredients = science_t4 },
 }
 
 transport_belts = {
@@ -73,17 +76,9 @@ stack_long_inserters = {
     { order = "c-b", name = "stack-long-inserter-mk2", health = 200, speed = 0.08, energy_KJ = 35, energy_drain_kw = 4, ingredients = { {"stack-long-inserter-mk1", 2},{"complex-processing-unit", 5} }, technology = "high-teir-inserters-mk2" },
 }
 
-chests = {
-    { order = "a-a", name = "chest-mk1", health = 180, inventory_size = 90, ingredients = { {"vibranium-plate", 2} }, technology = "large-logistic-containers" },
-}
-
-storage_tanks = {
-    { order = "a-b", name = "storage-tank-mk1", health = 1000, fluid_size = 1000, ingredients = { {"vibranium-plate", 20} }, technology = "test_tech" }
-}
-
 offshore_pumps = {
-    { order = "c-a", name = "offshore-pump-mk1", health = 150, pumping_size = 40, ingredients = { {"offshore-pump", 2},{"complex-processing-unit", 2} }, technology = "test_tech" },
-    { order = "c-b", name = "offshore-pump-mk2", health = 300, pumping_size = 60, ingredients = { {"offshore-pump-mk1", 2},{"complex-processing-unit", 5} }, technology = "test_tech" },
+    --{ order = "c-a", name = "offshore-pump-mk1", health = 150, pumping_size = 40, ingredients = { {"offshore-pump", 2},{"complex-processing-unit", 2} }, technology = "test_tech" },
+    --{ order = "c-b", name = "offshore-pump-mk2", health = 300, pumping_size = 60, ingredients = { {"offshore-pump-mk1", 2},{"complex-processing-unit", 5} }, technology = "test_tech" },
 }
 
 locomotives = {
@@ -111,15 +106,35 @@ construction_robots = {
     { order = "b-b", name = "construction-robot-mk2", health = 200, max_payload_size = 4, speed = 0.24, max_energy_mj = 6, energy_per_move_kj = 15, ingredients = { {"construction-robot-mk1", 2},{"complex-processing-unit", 14} }, technology = "advanced-robots-mk2" },
 }
 
+chests = {
+    { order = "a-a", name = "chest-mk1", health = 400, inventory_size = 70, ingredients = { {"gold-plate", 4} }, technology = "large-logistic-containers" },
+    { order = "a-b", name = "chest-mk2", health = 600, inventory_size = 96, ingredients = { {"vibranium-plate", 4} }, technology = "large-logistic-containers" },
+}
+
 logistic_containers ={
-    { order = "c-a", name = "large-logistic-container-active-provider", type = "active-provider", health = 500, inventory_size = 90,    ingredients = { {"logistic-chest-active-provider", 1},{"chest-mk1", 1} }, technology = "large-logistic-containers" },
-    { order = "c-b", name = "large-logistic-container-passive-provider", type = "passive-provider", health = 500, inventory_size = 90,  ingredients = { {"logistic-chest-passive-provider", 1},{"chest-mk1", 1} }, technology = "large-logistic-containers" },
-    { order = "c-c", name = "large-logistic-container-storage", type = "storage", health = 500, inventory_size = 90,                    ingredients = { {"logistic-chest-storage", 1},{"chest-mk1", 1} }, technology = "large-logistic-containers" },
-    { order = "c-d", name = "large-logistic-container-buffer", type = "buffer", health = 500, inventory_size = 90,                      ingredients = { {"logistic-chest-buffer", 1},{"chest-mk1", 1} }, technology = "large-logistic-containers" },
-    { order = "c-e", name = "large-logistic-container-requester", type = "requester", health = 500, inventory_size = 90,                ingredients = { {"logistic-chest-requester", 1},{"chest-mk1", 1} }, technology = "large-logistic-containers" },
+    { order = "c-a", name = "large-logistic-container-active-provider", type = "active-provider", health = 500, inventory_size = 96,    ingredients = { {"logistic-chest-active-provider", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
+    { order = "c-b", name = "large-logistic-container-passive-provider", type = "passive-provider", health = 500, inventory_size = 96,  ingredients = { {"logistic-chest-passive-provider", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
+    { order = "c-c", name = "large-logistic-container-storage", type = "storage", health = 500, inventory_size = 96,                    ingredients = { {"logistic-chest-storage", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
+    { order = "c-d", name = "large-logistic-container-buffer", type = "buffer", health = 500, inventory_size = 96,                      ingredients = { {"logistic-chest-buffer", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
+    { order = "c-e", name = "large-logistic-container-requester", type = "requester", health = 500, inventory_size = 96,                ingredients = { {"logistic-chest-requester", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
 }
 
 roboports = {
     { order = "a-a", name = "roboport-mk1", health = 1000, recharging_count = 2, input_MW = 16, buffer_MJ = 400, recharge_minimum_MJ = 80, energy_usage_KW = 100, charging_energy_KW = 2000, logistics_radius = 50, construction_radius = 110, ingredients = { {"roboport", 2},{"complex-processing-unit", 10} }, technology = "advanced-robots-mk1" },
     { order = "a-b", name = "roboport-mk2", health = 2000, recharging_count = 4, input_MW = 64, buffer_MJ = 800, recharge_minimum_MJ = 160, energy_usage_KW = 200, charging_energy_KW = 4000, logistics_radius = 100, construction_radius = 220, ingredients = { {"roboport-mk1", 2},{"complex-processing-unit", 20} }, technology = "advanced-robots-mk2" },
+}
+
+storage_tanks = {
+    { order = "b-a", name = "storage-tank-mk1", health = 800, fluid_size = 1000, pipe_covers = goldpipecovers(), ingredients = { {"gold-plate", 20} }, technology = "fluid-handling-mk1" },
+    { order = "b-b", name = "storage-tank-mk2", health = 1600, fluid_size = 3000, pipe_covers = darkpipecovers(), ingredients = { {"vibranium-plate", 20} }, technology = "fluid-handling-mk2" },
+}
+
+pipes = {
+    { order = "c-a", name = "pipe-mk1", health = 300, ingredients = { {"gold-plate", 2} }, technology = "fluid-handling-mk1" },
+    { order = "c-b", name = "pipe-mk2", health = 600, ingredients = { {"vibranium-plate", 2} }, technology = "fluid-handling-mk2" },
+}
+
+pipe_to_grounds = {
+    { order = "d-a", name = "pipe-to-ground-mk1", health = 300, distance = 20, pipe_covers = goldpipecovers(), ingredients = { {"pipe-mk1",5},{"gold-plate",2} }, technology = "fluid-handling-mk1" },
+    { order = "d-b", name = "pipe-to-ground-mk2", health = 600, distance = 40, pipe_covers = darkpipecovers(), ingredients = { {"pipe-mk2",5},{"vibranium-plate",2} }, technology = "fluid-handling-mk2" },
 }
