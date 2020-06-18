@@ -72,8 +72,8 @@ stack_filter_inserters = {
 }
 
 stack_long_inserters = {
-    { order = "c-a", name = "stack-long-inserter-mk1", health = 180, speed = 0.04, energy_KJ = 30, energy_drain_kw = 2, ingredients = { {"long-handed-inserter", 1},{"stack-inserter", 1},{"complex-processing-unit", 2} }, technology = "high-teir-inserters-mk1" },
-    { order = "c-b", name = "stack-long-inserter-mk2", health = 200, speed = 0.08, energy_KJ = 35, energy_drain_kw = 4, ingredients = { {"stack-long-inserter-mk1", 2},{"complex-processing-unit", 5} }, technology = "high-teir-inserters-mk2" },
+    --{ order = "c-a", name = "stack-long-inserter-mk1", health = 180, speed = 0.04, energy_KJ = 30, energy_drain_kw = 2, ingredients = { {"long-handed-inserter", 1},{"stack-inserter", 1},{"complex-processing-unit", 2} }, technology = "high-teir-inserters-mk1" },
+    --{ order = "c-b", name = "stack-long-inserter-mk2", health = 200, speed = 0.08, energy_KJ = 35, energy_drain_kw = 4, ingredients = { {"stack-long-inserter-mk1", 2},{"complex-processing-unit", 5} }, technology = "high-teir-inserters-mk2" },
 }
 
 offshore_pumps = {
