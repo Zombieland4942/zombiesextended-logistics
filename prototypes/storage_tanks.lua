@@ -7,17 +7,17 @@ for x, storage_tank in pairs(storage_tanks) do
     item = util.table.deepcopy(item_base)
 
     entity.name = storage_tank.name    
-    entity.icon = "__darkstar-logistics__/graphics/icons/" .. storage_tank.name .. ".png"
+    entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. storage_tank.name .. ".png"
     entity.minable.result = storage_tank.name
     entity.max_health = storage_tank.health
     entity.fluid_box.base_area = storage_tank.fluid_size
     entity.fluid_box.pipe_covers = storage_tank.pipe_covers
 
-    entity.pictures.picture.sheets[1].filename = "__darkstar-logistics__/graphics/entity/" .. storage_tank.name .. "/storage-tank.png"
-    entity.pictures.picture.sheets[1].hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. storage_tank.name .. "/hr-storage-tank.png"
+    entity.pictures.picture.sheets[1].filename = "__zombiesextended-logistics__/graphics/entity/" .. storage_tank.name .. "/storage-tank.png"
+    entity.pictures.picture.sheets[1].hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. storage_tank.name .. "/hr-storage-tank.png"
 
     item.name = storage_tank.name
-    item.icon = "__darkstar-logistics__/graphics/icons/" .. storage_tank.name .. ".png"
+    item.icon = "__zombiesextended-logistics__/graphics/icons/" .. storage_tank.name .. ".png"
     item.place_result = storage_tank.name
     item.order = storage_tank.order
     item.subgroup = "ds-storage"

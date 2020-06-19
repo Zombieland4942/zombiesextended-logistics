@@ -8,7 +8,7 @@ for x, roboport in pairs(roboports) do
     item = util.table.deepcopy(item_base)
 
     entity.name = roboport.name    
-    entity.icon = "__darkstar-logistics__/graphics/icons/" .. roboport.name .. ".png"
+    entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. roboport.name .. ".png"
     entity.minable.result = roboport.name
     entity.max_health = roboport.health
 
@@ -29,13 +29,13 @@ for x, roboport in pairs(roboports) do
         table.insert(entity.charging_offsets, {-1.5, 1.5})
     end
 
-    entity.base.layers[1].filename = "__darkstar-logistics__/graphics/entity/" .. roboport.name .. "/roboport-base.png"
-    entity.base.layers[1].hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. roboport.name .. "/hr-roboport-base.png"
-    entity.base_patch.filename = "__darkstar-logistics__/graphics/entity/" .. roboport.name .. "/roboport-base-patch.png"
-    entity.base_patch.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. roboport.name .. "/hr-roboport-base-patch.png"
+    entity.base.layers[1].filename = "__zombiesextended-logistics__/graphics/entity/" .. roboport.name .. "/roboport-base.png"
+    entity.base.layers[1].hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. roboport.name .. "/hr-roboport-base.png"
+    entity.base_patch.filename = "__zombiesextended-logistics__/graphics/entity/" .. roboport.name .. "/roboport-base-patch.png"
+    entity.base_patch.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. roboport.name .. "/hr-roboport-base-patch.png"
 
     item.name = roboport.name
-    item.icon = "__darkstar-logistics__/graphics/icons/" .. roboport.name .. ".png"
+    item.icon = "__zombiesextended-logistics__/graphics/icons/" .. roboport.name .. ".png"
     item.place_result = roboport.name
     item.order = roboport.order
     item.subgroup = "ds-robotports"

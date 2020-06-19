@@ -8,23 +8,23 @@ for x, pipe_to_ground in pairs(pipe_to_grounds) do
     item = util.table.deepcopy(item_base)
 
     entity.name = pipe_to_ground.name    
-    entity.icon = "__darkstar-logistics__/graphics/icons/" .. pipe_to_ground.name .. ".png"
+    entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. pipe_to_ground.name .. ".png"
     entity.minable.result = pipe_to_ground.name
     entity.max_health = pipe_to_ground.health
     entity.fluid_box.pipe_connections[2].max_underground_distance = pipe_to_ground.distance    
     entity.fluid_box.pipe_covers = pipe_to_ground.pipe_covers
         
-    entity.pictures.up.filename = "__darkstar-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/pipe-to-ground-up.png"
-    entity.pictures.up.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/hr-pipe-to-ground-up.png"
-    entity.pictures.down.filename = "__darkstar-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/pipe-to-ground-down.png"
-    entity.pictures.down.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/hr-pipe-to-ground-down.png"
-    entity.pictures.left.filename = "__darkstar-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/pipe-to-ground-left.png"
-    entity.pictures.left.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/hr-pipe-to-ground-left.png"
-    entity.pictures.right.filename = "__darkstar-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/pipe-to-ground-right.png"
-    entity.pictures.right.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/hr-pipe-to-ground-right.png"
+    entity.pictures.up.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/pipe-to-ground-up.png"
+    entity.pictures.up.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/hr-pipe-to-ground-up.png"
+    entity.pictures.down.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/pipe-to-ground-down.png"
+    entity.pictures.down.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/hr-pipe-to-ground-down.png"
+    entity.pictures.left.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/pipe-to-ground-left.png"
+    entity.pictures.left.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/hr-pipe-to-ground-left.png"
+    entity.pictures.right.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/pipe-to-ground-right.png"
+    entity.pictures.right.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/hr-pipe-to-ground-right.png"
 
     item.name = pipe_to_ground.name
-    item.icon = "__darkstar-logistics__/graphics/icons/" .. pipe_to_ground.name .. ".png"
+    item.icon = "__zombiesextended-logistics__/graphics/icons/" .. pipe_to_ground.name .. ".png"
     item.place_result = pipe_to_ground.name
     item.order = pipe_to_ground.order
     item.subgroup = "ds-storage"

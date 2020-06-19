@@ -9,18 +9,18 @@ for x, transport_belt in pairs(transport_belts) do
     belt_animation_set = util.table.deepcopy(global_belt_animation_set)
 
     entity.name = transport_belt.name    
-    entity.icon = "__darkstar-logistics__/graphics/icons/" .. transport_belt.name .. ".png"
+    entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. transport_belt.name .. ".png"
     entity.minable.result = transport_belt.name
     entity.max_health = transport_belt.health  
     entity.speed = transport_belt.speed
     
-    belt_animation_set.animation_set.filename = "__darkstar-logistics__/graphics/entity/" .. transport_belt.name .. "/transport-belt.png"
-    belt_animation_set.animation_set.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. transport_belt.name .. "/hr-transport-belt.png"
+    belt_animation_set.animation_set.filename = "__zombiesextended-logistics__/graphics/entity/" .. transport_belt.name .. "/transport-belt.png"
+    belt_animation_set.animation_set.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. transport_belt.name .. "/hr-transport-belt.png"
 
     entity.belt_animation_set = belt_animation_set
 
     item.name = transport_belt.name
-    item.icon = "__darkstar-logistics__/graphics/icons/" .. transport_belt.name .. ".png"
+    item.icon = "__zombiesextended-logistics__/graphics/icons/" .. transport_belt.name .. ".png"
     item.place_result = transport_belt.name
     item.order = transport_belt.order
     item.subgroup = "ds-belt"

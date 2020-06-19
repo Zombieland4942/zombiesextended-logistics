@@ -8,7 +8,7 @@ for x, logistic_robot in pairs(logistic_robots) do
     item = util.table.deepcopy(item_base)
 
     entity.name = logistic_robot.name    
-    entity.icon = "__darkstar-logistics__/graphics/icons/" .. logistic_robot.name .. ".png"
+    entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. logistic_robot.name .. ".png"
     entity.minable.result = logistic_robot.name
     entity.max_health = logistic_robot.health
 
@@ -18,17 +18,17 @@ for x, logistic_robot in pairs(logistic_robots) do
     entity.max_energy = logistic_robot.max_energy_mj .. "MJ"    
     entity.energy_per_move = logistic_robot.energy_per_move_kj .. "kJ"    
     
-    entity.idle.filename = "__darkstar-logistics__/graphics/entity/" .. logistic_robot.name .. "/logistic-robot.png"
-    entity.idle.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. logistic_robot.name .. "/hr-logistic-robot.png"
-    entity.idle_with_cargo.filename = "__darkstar-logistics__/graphics/entity/" .. logistic_robot.name .. "/logistic-robot.png"
-    entity.idle_with_cargo.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. logistic_robot.name .. "/hr-logistic-robot.png"
-    entity.in_motion.filename = "__darkstar-logistics__/graphics/entity/" .. logistic_robot.name .. "/logistic-robot.png"
-    entity.in_motion.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. logistic_robot.name .. "/hr-logistic-robot.png"
-    entity.in_motion_with_cargo.filename = "__darkstar-logistics__/graphics/entity/" .. logistic_robot.name .. "/logistic-robot.png"
-    entity.in_motion_with_cargo.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. logistic_robot.name .. "/hr-logistic-robot.png"
+    entity.idle.filename = "__zombiesextended-logistics__/graphics/entity/" .. logistic_robot.name .. "/logistic-robot.png"
+    entity.idle.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. logistic_robot.name .. "/hr-logistic-robot.png"
+    entity.idle_with_cargo.filename = "__zombiesextended-logistics__/graphics/entity/" .. logistic_robot.name .. "/logistic-robot.png"
+    entity.idle_with_cargo.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. logistic_robot.name .. "/hr-logistic-robot.png"
+    entity.in_motion.filename = "__zombiesextended-logistics__/graphics/entity/" .. logistic_robot.name .. "/logistic-robot.png"
+    entity.in_motion.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. logistic_robot.name .. "/hr-logistic-robot.png"
+    entity.in_motion_with_cargo.filename = "__zombiesextended-logistics__/graphics/entity/" .. logistic_robot.name .. "/logistic-robot.png"
+    entity.in_motion_with_cargo.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. logistic_robot.name .. "/hr-logistic-robot.png"
     
     item.name = logistic_robot.name
-    item.icon = "__darkstar-logistics__/graphics/icons/" .. logistic_robot.name .. ".png"
+    item.icon = "__zombiesextended-logistics__/graphics/icons/" .. logistic_robot.name .. ".png"
     item.place_result = logistic_robot.name
     item.order = logistic_robot.order
     item.subgroup = "ds-robots"

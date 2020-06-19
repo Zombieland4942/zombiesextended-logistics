@@ -8,7 +8,7 @@ for x, fluid_wagon in pairs(fluid_wagons) do
     item = util.table.deepcopy(item_base)
 
     entity.name = fluid_wagon.name    
-    entity.icon = "__darkstar-logistics__/graphics/icons/" .. fluid_wagon.name .. ".png"
+    entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. fluid_wagon.name .. ".png"
     entity.minable.result = fluid_wagon.name
     entity.max_health = fluid_wagon.health
     entity.capacity = fluid_wagon.capacity
@@ -18,7 +18,7 @@ for x, fluid_wagon in pairs(fluid_wagons) do
     entity.equipment_grid = fluid_wagon.equipment_grid
     
     item.name = fluid_wagon.name
-    item.icon = "__darkstar-logistics__/graphics/icons/" .. fluid_wagon.name .. ".png"
+    item.icon = "__zombiesextended-logistics__/graphics/icons/" .. fluid_wagon.name .. ".png"
     item.place_result = fluid_wagon.name
     item.order = fluid_wagon.order
     item.subgroup = "ds-trains"

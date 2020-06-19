@@ -9,28 +9,28 @@ for x, underground_belt in pairs(underground_belts) do
     belt_animation_set = util.table.deepcopy(global_belt_animation_set)
 
     entity.name = underground_belt.name    
-    entity.icon = "__darkstar-logistics__/graphics/icons/" .. underground_belt.name .. ".png"
+    entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. underground_belt.name .. ".png"
     entity.minable.result = underground_belt.name
     entity.max_health = underground_belt.health  
     entity.speed = underground_belt.speed
     entity.max_distance = underground_belt.reach
         
-    belt_animation_set.animation_set.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.belt_name .. "/transport-belt.png"
-    belt_animation_set.animation_set.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.belt_name .. "/hr-transport-belt.png"
+    belt_animation_set.animation_set.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.belt_name .. "/transport-belt.png"
+    belt_animation_set.animation_set.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.belt_name .. "/hr-transport-belt.png"
 
     entity.belt_animation_set = belt_animation_set
 
-    entity.structure.direction_in.sheet.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.name .. "/underground-belt-structure.png"
-    entity.structure.direction_in.sheet.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.name .. "/hr-underground-belt-structure.png"
-    entity.structure.direction_out.sheet.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.name .. "/underground-belt-structure.png"
-    entity.structure.direction_out.sheet.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.name .. "/hr-underground-belt-structure.png"
-    entity.structure.direction_in_side_loading.sheet.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.name .. "/underground-belt-structure.png"
-    entity.structure.direction_in_side_loading.sheet.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.name .. "/hr-underground-belt-structure.png"
-    entity.structure.direction_out_side_loading.sheet.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.name .. "/underground-belt-structure.png"
-    entity.structure.direction_out_side_loading.sheet.hr_version.filename = "__darkstar-logistics__/graphics/entity/" .. underground_belt.name .. "/hr-underground-belt-structure.png"
+    entity.structure.direction_in.sheet.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.name .. "/underground-belt-structure.png"
+    entity.structure.direction_in.sheet.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.name .. "/hr-underground-belt-structure.png"
+    entity.structure.direction_out.sheet.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.name .. "/underground-belt-structure.png"
+    entity.structure.direction_out.sheet.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.name .. "/hr-underground-belt-structure.png"
+    entity.structure.direction_in_side_loading.sheet.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.name .. "/underground-belt-structure.png"
+    entity.structure.direction_in_side_loading.sheet.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.name .. "/hr-underground-belt-structure.png"
+    entity.structure.direction_out_side_loading.sheet.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.name .. "/underground-belt-structure.png"
+    entity.structure.direction_out_side_loading.sheet.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.name .. "/hr-underground-belt-structure.png"
 
     item.name = underground_belt.name
-    item.icon = "__darkstar-logistics__/graphics/icons/" .. underground_belt.name .. ".png"
+    item.icon = "__zombiesextended-logistics__/graphics/icons/" .. underground_belt.name .. ".png"
     item.place_result = underground_belt.name
     item.order = underground_belt.order
     item.subgroup = "ds-belt"
