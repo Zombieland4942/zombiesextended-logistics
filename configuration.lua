@@ -107,8 +107,8 @@ construction_robots = {
 }
 
 chests = {
-    { order = "a-a", name = "chest-mk1", health = 400, inventory_size = 70, ingredients = { {"gold-plate", 4} } },
-    { order = "a-b", name = "chest-mk2", health = 600, inventory_size = 96, ingredients = { {"vibranium-plate", 4} } },
+    { order = "a-a", name = "chest-mk1", health = 400, inventory_size = 70, ingredients = { {"gold-plate", 2} } },
+    { order = "a-b", name = "chest-mk2", health = 600, inventory_size = 96, ingredients = { {"vibranium-plate", 2} } },
 }
 
 logistic_containers ={
