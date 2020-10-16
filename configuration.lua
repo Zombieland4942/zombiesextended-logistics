@@ -97,13 +97,13 @@ fluid_wagons = {
 }
 
 logistic_robots = {
-    { order = "a-a", name = "logistic-robot-mk1", health = 100, max_payload_size = 2, speed = 0.1, max_energy_mj = 3, energy_per_move_kj = 10, ingredients = { {"logistic-robot", 2},{"complex-processing-unit", 7} }, technology = "advanced-robots-mk1" },
-    { order = "a-b", name = "logistic-robot-mk2", health = 200, max_payload_size = 4, speed = 0.2, max_energy_mj = 6, energy_per_move_kj = 15, ingredients = { {"logistic-robot-mk1", 2},{"complex-processing-unit", 14} }, technology = "advanced-robots-mk2" },
+    { order = "b-a", name = "logistic-robot-mk1", health = 100, max_payload_size = 2, speed = 0.1, max_energy_mj = 3, energy_per_move_kj = 10, ingredients = { {"logistic-robot", 2},{"complex-processing-unit", 7} }, technology = "advanced-robots-mk1" },
+    { order = "b-b", name = "logistic-robot-mk2", health = 200, max_payload_size = 4, speed = 0.2, max_energy_mj = 6, energy_per_move_kj = 15, ingredients = { {"logistic-robot-mk1", 2},{"complex-processing-unit", 14} }, technology = "advanced-robots-mk2" },
 }
 
 construction_robots = {    
-    { order = "b-a", name = "construction-robot-mk1", health = 100, max_payload_size = 2, speed = 0.12, max_energy_mj = 3, energy_per_move_kj = 10, ingredients = { {"construction-robot", 2},{"complex-processing-unit", 7} }, technology = "advanced-robots-mk1" },
-    { order = "b-b", name = "construction-robot-mk2", health = 200, max_payload_size = 4, speed = 0.24, max_energy_mj = 6, energy_per_move_kj = 15, ingredients = { {"construction-robot-mk1", 2},{"complex-processing-unit", 14} }, technology = "advanced-robots-mk2" },
+    { order = "c-a", name = "construction-robot-mk1", health = 100, max_payload_size = 2, speed = 0.12, max_energy_mj = 3, energy_per_move_kj = 10, ingredients = { {"construction-robot", 2},{"complex-processing-unit", 7} }, technology = "advanced-robots-mk1" },
+    { order = "c-b", name = "construction-robot-mk2", health = 200, max_payload_size = 4, speed = 0.24, max_energy_mj = 6, energy_per_move_kj = 15, ingredients = { {"construction-robot-mk1", 2},{"complex-processing-unit", 14} }, technology = "advanced-robots-mk2" },
 }
 
 chests = {
@@ -112,11 +112,11 @@ chests = {
 }
 
 logistic_containers ={
-    { order = "c-a", name = "large-logistic-container-active-provider", type = "active-provider", health = 500, inventory_size = 96,    ingredients = { {"logistic-chest-active-provider", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
-    { order = "c-b", name = "large-logistic-container-passive-provider", type = "passive-provider", health = 500, inventory_size = 96,  ingredients = { {"logistic-chest-passive-provider", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
-    { order = "c-c", name = "large-logistic-container-storage", type = "storage", health = 500, inventory_size = 96,                    ingredients = { {"logistic-chest-storage", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
-    { order = "c-d", name = "large-logistic-container-buffer", type = "buffer", health = 500, inventory_size = 96,                      ingredients = { {"logistic-chest-buffer", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
-    { order = "c-e", name = "large-logistic-container-requester", type = "requester", health = 500, inventory_size = 96,                ingredients = { {"logistic-chest-requester", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
+    { order = "a-a", name = "large-logistic-container-active-provider", type = "active-provider", health = 500, inventory_size = 96,    ingredients = { {"logistic-chest-active-provider", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
+    { order = "a-b", name = "large-logistic-container-passive-provider", type = "passive-provider", health = 500, inventory_size = 96,  ingredients = { {"logistic-chest-passive-provider", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
+    { order = "a-c", name = "large-logistic-container-storage", type = "storage", health = 500, inventory_size = 96,                    ingredients = { {"logistic-chest-storage", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
+    { order = "a-d", name = "large-logistic-container-buffer", type = "buffer", health = 500, inventory_size = 96,                      ingredients = { {"logistic-chest-buffer", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
+    { order = "a-e", name = "large-logistic-container-requester", type = "requester", health = 500, inventory_size = 96,                ingredients = { {"logistic-chest-requester", 1},{"chest-mk2", 1} }, technology = "large-logistic-containers" },
 }
 
 roboports = {

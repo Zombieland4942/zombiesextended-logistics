@@ -3,6 +3,7 @@ Version: 1.0.1
 Date: ????
   Changes:
     - Made chests slightly cheaper
+    - Adjusted Menu layout
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2020-08-28

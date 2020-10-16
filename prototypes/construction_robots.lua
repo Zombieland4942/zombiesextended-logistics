@@ -29,7 +29,7 @@ for x, construction_robot in pairs(construction_robots) do
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. construction_robot.name .. ".png"
     item.place_result = construction_robot.name
     item.order = construction_robot.order
-    item.subgroup = "ds-robots"
+    item.subgroup = "ds-robotports"
 
     table.insert(data.raw["technology"][construction_robot.technology].effects, { type = "unlock-recipe", recipe = construction_robot.name })
 
