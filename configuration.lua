@@ -77,8 +77,8 @@ stack_long_inserters = {
 }
 
 offshore_pumps = {
-    --{ order = "c-a", name = "offshore-pump-mk1", health = 150, pumping_size = 40, ingredients = { {"offshore-pump", 2},{"complex-processing-unit", 2} }, technology = "test_tech" },
-    --{ order = "c-b", name = "offshore-pump-mk2", health = 300, pumping_size = 60, ingredients = { {"offshore-pump-mk1", 2},{"complex-processing-unit", 5} }, technology = "test_tech" },
+    { order = "c-a", name = "offshore-pump-mk1", health = 150, pumping_size = 40, ingredients = { {"offshore-pump", 2} }, technology = "fluid-handling-mk1" },
+    { order = "c-b", name = "offshore-pump-mk2", health = 300, pumping_size = 60, ingredients = { {"offshore-pump-mk1", 2} }, technology = "fluid-handling-mk2" },
 }
 
 locomotives = {
