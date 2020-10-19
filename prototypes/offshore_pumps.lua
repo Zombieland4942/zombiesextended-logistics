@@ -12,6 +12,7 @@ for x, offshore_pump in pairs(offshore_pumps) do
     entity.minable.result = offshore_pump.name
     entity.max_health = offshore_pump.health
     entity.pumping_speed = offshore_pump.pumping_size
+    entity.next_upgrade = offshore_pump.next_upgrade
     
     entity.graphics_set.animation.north.layers[1].filename = "__zombiesextended-logistics__/graphics/entity/" .. offshore_pump.name .. "/offshore-pump_North.png"
     entity.graphics_set.animation.north.layers[1].hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. offshore_pump.name .. "/hr-offshore-pump_North.png"    

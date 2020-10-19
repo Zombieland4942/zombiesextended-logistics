@@ -17,6 +17,7 @@ for x, locomotive in pairs(locomotives) do
     entity.braking_force = locomotive.breaking_force
     entity.friction_force = locomotive.friction_force
     entity.equipment_grid = locomotive.equipment_grid
+    entity.next_upgrade = locomotive.next_upgrade
 
     item.name = locomotive.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. locomotive.name .. ".png"

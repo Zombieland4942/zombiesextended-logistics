@@ -16,6 +16,7 @@ for x, fastlong_inserter in pairs(fastlong_inserters) do
     entity.energy_per_movement = fastlong_inserter.energy_KJ .. "KJ"
     entity.energy_per_rotation = fastlong_inserter.energy_KJ .. "KJ"
     entity.energy_source.drain = fastlong_inserter.energy_drain_kw .. "kW"
+    entity.next_upgrade = fastlong_inserter.next_upgrade
            
     entity.hand_base_picture.filename = "__zombiesextended-logistics__/graphics/entity/" .. fastlong_inserter.name .. "/inserter-hand-base.png"
     entity.hand_base_picture.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. fastlong_inserter.name .. "/hr-inserter-hand-base.png"

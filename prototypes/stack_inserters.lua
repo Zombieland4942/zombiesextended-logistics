@@ -15,6 +15,7 @@ for x, stack_inserter in pairs(stack_inserters) do
     entity.energy_per_movement = stack_inserter.energy_KJ .. "KJ"
     entity.energy_per_rotation = stack_inserter.energy_KJ .. "KJ"
     entity.energy_source.drain = stack_inserter.energy_drain_kw .. "kW"
+    entity.next_upgrade = stack_inserter.next_upgrade
            
     entity.hand_base_picture.filename = "__zombiesextended-logistics__/graphics/entity/" .. stack_inserter.name .. "/stack-inserter-hand-base.png"
     entity.hand_base_picture.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. stack_inserter.name .. "/hr-stack-inserter-hand-base.png"

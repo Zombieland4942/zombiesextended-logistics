@@ -13,6 +13,7 @@ for x, pipe_to_ground in pairs(pipe_to_grounds) do
     entity.max_health = pipe_to_ground.health
     entity.fluid_box.pipe_connections[2].max_underground_distance = pipe_to_ground.distance    
     entity.fluid_box.pipe_covers = pipe_to_ground.pipe_covers
+    entity.next_upgrade = pipe_to_ground.next_upgrade
         
     entity.pictures.up.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/pipe-to-ground-up.png"
     entity.pictures.up.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe_to_ground.name .. "/hr-pipe-to-ground-up.png"

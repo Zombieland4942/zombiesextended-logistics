@@ -13,6 +13,7 @@ for x, transport_belt in pairs(transport_belts) do
     entity.minable.result = transport_belt.name
     entity.max_health = transport_belt.health  
     entity.speed = transport_belt.speed
+    entity.next_upgrade = transport_belt.next_upgrade
     
     belt_animation_set.animation_set.filename = "__zombiesextended-logistics__/graphics/entity/" .. transport_belt.name .. "/transport-belt.png"
     belt_animation_set.animation_set.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. transport_belt.name .. "/hr-transport-belt.png"

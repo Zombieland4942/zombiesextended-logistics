@@ -16,6 +16,7 @@ for x, fast_filter_inserter in pairs(fast_filter_inserters) do
     entity.energy_per_movement = fast_filter_inserter.energy_KJ .. "KJ"
     entity.energy_per_rotation = fast_filter_inserter.energy_KJ .. "KJ"
     entity.energy_source.drain = fast_filter_inserter.energy_drain_kw .. "kW"
+    entity.next_upgrade = fast_filter_inserter.next_upgrade
          
     entity.hand_base_picture.filename = "__zombiesextended-logistics__/graphics/entity/" .. fast_filter_inserter.name .. "/inserter-hand-base.png"
     entity.hand_base_picture.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. fast_filter_inserter.name .. "/hr-inserter-hand-base.png"

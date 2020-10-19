@@ -11,7 +11,8 @@ for x, chest in pairs(chests) do
     entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. chest.name .. ".png"
     entity.minable.result = chest.name
     entity.max_health = chest.health
-    entity.inventory_size = chest.inventory_size
+    entity.inventory_size = chest.inventory_size    
+    entity.next_upgrade = chest.next_upgrade
         
     entity.picture.layers[1].filename = "__zombiesextended-logistics__/graphics/entity/" .. chest.name .. "/chest.png"
     entity.picture.layers[1].hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. chest.name .. "/hr-chest.png"

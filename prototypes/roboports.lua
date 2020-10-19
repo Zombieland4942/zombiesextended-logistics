@@ -11,6 +11,7 @@ for x, roboport in pairs(roboports) do
     entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. roboport.name .. ".png"
     entity.minable.result = roboport.name
     entity.max_health = roboport.health
+    entity.next_upgrade = roboport.next_upgrade
 
     entity.energy_source.input_flow_limit = roboport.input_MW .. "MW"
     entity.energy_source.buffer_capacity = roboport.buffer_MJ .. "MJ"

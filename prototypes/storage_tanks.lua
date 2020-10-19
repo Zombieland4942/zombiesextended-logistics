@@ -12,6 +12,7 @@ for x, storage_tank in pairs(storage_tanks) do
     entity.max_health = storage_tank.health
     entity.fluid_box.base_area = storage_tank.fluid_size
     entity.fluid_box.pipe_covers = storage_tank.pipe_covers
+    entity.next_upgrade = storage_tank.next_upgrade
 
     entity.pictures.picture.sheets[1].filename = "__zombiesextended-logistics__/graphics/entity/" .. storage_tank.name .. "/storage-tank.png"
     entity.pictures.picture.sheets[1].hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. storage_tank.name .. "/hr-storage-tank.png"

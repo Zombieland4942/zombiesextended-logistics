@@ -13,6 +13,7 @@ for x, splitter in pairs(splitters) do
     entity.minable.result = splitter.name
     entity.max_health = splitter.health  
     entity.speed = splitter.speed
+    entity.next_upgrade = splitter.next_upgrade
         
     belt_animation_set.animation_set.filename = "__zombiesextended-logistics__/graphics/entity/" .. splitter.belt_name .. "/transport-belt.png"
     belt_animation_set.animation_set.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. splitter.belt_name .. "/hr-transport-belt.png"

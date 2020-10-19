@@ -11,6 +11,7 @@ for x, pipe in pairs(pipes) do
     entity.icon = "__zombiesextended-logistics__/graphics/icons/" .. pipe.name .. ".png"
     entity.minable.result = pipe.name
     entity.max_health = pipe.health
+    entity.next_upgrade = pipe.next_upgrade
 
     entity.pictures.straight_vertical_single.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe.name .. "/pipe-straight-vertical-single.png"
     entity.pictures.straight_vertical_single.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. pipe.name .. "/hr-pipe-straight-vertical-single.png"

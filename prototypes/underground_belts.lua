@@ -14,6 +14,7 @@ for x, underground_belt in pairs(underground_belts) do
     entity.max_health = underground_belt.health  
     entity.speed = underground_belt.speed
     entity.max_distance = underground_belt.reach
+    entity.next_upgrade = underground_belt.next_upgrade
         
     belt_animation_set.animation_set.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.belt_name .. "/transport-belt.png"
     belt_animation_set.animation_set.hr_version.filename = "__zombiesextended-logistics__/graphics/entity/" .. underground_belt.belt_name .. "/hr-transport-belt.png"
