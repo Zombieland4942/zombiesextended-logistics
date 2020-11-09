@@ -7,6 +7,8 @@ if deadlock then
         technology          = "high-teir-logistics-mk1",
         order               = "d",
         beltbox_technology  = "high-teir-logistics-mk1",
+        beltbox_ingredients = {{"express-transport-belt-beltbox", 1}, {"iron-gear-wheel", 30}, {"vibranium-plate", 20}},
+        loader_ingredients  = {{"express-transport-belt-loader", 1}, {"iron-gear-wheel", 40}, {"vibranium-plate", 10}}  
     })
 
     deadlock.add_tier({
@@ -15,6 +17,8 @@ if deadlock then
         underground_belt    = "underground-belt-mk2",
         technology          = "high-teir-logistics-mk2",
         order               = "d",
-        beltbox_technology  = "high-teir-logistics-mk2",
+        beltbox_technology  = "high-teir-logistics-mk2", 
+        beltbox_ingredients = {{"transport-belt-mk1-beltbox", 1}, {"iron-gear-wheel", 40}, {"vibranium-plate", 25}},
+        loader_ingredients  = {{"transport-belt-mk1-loader", 1}, {"iron-gear-wheel", 40}, {"vibranium-plate", 15}}
     })
 end
