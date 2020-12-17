@@ -2,6 +2,8 @@
 Version: 1.0.5
 Date: ????
   Changes:
+    - Added offshore pumps
+    - Adjusted Robots and Roboports
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 2020-11-24

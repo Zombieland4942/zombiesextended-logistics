@@ -29,7 +29,7 @@ for x, offshore_pump in pairs(offshore_pumps) do
     item.order = offshore_pump.order
     item.subgroup = "ds-extraction"
 
-    --table.insert(data.raw["technology"][offshore_pump.technology].effects, { type = "unlock-recipe", recipe = offshore_pump.name })
+    table.insert(data.raw["technology"][offshore_pump.technology].effects, { type = "unlock-recipe", recipe = offshore_pump.name })
 
     data:extend({ entity, item,
     {

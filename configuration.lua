@@ -137,13 +137,13 @@ fluid_wagons = {
 }
 
 logistic_robots = {
-    { order = "b-a", name = "logistic-robot-mk1", health = 100, max_payload_size = 2, speed = 0.1, max_energy_mj = 3, energy_per_move_kj = 10, ingredients = { {"logistic-robot", 2},{"complex-processing-unit", 7} }, technology = "advanced-robots-mk1" },
-    { order = "b-b", name = "logistic-robot-mk2", health = 200, max_payload_size = 4, speed = 0.2, max_energy_mj = 6, energy_per_move_kj = 15, ingredients = { {"logistic-robot-mk1", 2},{"complex-processing-unit", 14} }, technology = "advanced-robots-mk2" },
+    { order = "b-a", name = "logistic-robot-mk1", health = 200, max_payload_size = 4, speed = 0.12, max_energy_mj = 3, energy_per_move_kj = 5, ingredients = { {"logistic-robot", 2},{"complex-processing-unit", 7} }, technology = "advanced-robots-mk1" },
+    { order = "b-b", name = "logistic-robot-mk2", health = 300, max_payload_size = 8, speed = 0.24, max_energy_mj = 6, energy_per_move_kj = 5, ingredients = { {"logistic-robot-mk1", 2},{"complex-processing-unit", 14} }, technology = "advanced-robots-mk2" },
 }
 
 construction_robots = {    
-    { order = "c-a", name = "construction-robot-mk1", health = 100, max_payload_size = 2, speed = 0.12, max_energy_mj = 3, energy_per_move_kj = 10, ingredients = { {"construction-robot", 2},{"complex-processing-unit", 7} }, technology = "advanced-robots-mk1" },
-    { order = "c-b", name = "construction-robot-mk2", health = 200, max_payload_size = 4, speed = 0.24, max_energy_mj = 6, energy_per_move_kj = 15, ingredients = { {"construction-robot-mk1", 2},{"complex-processing-unit", 14} }, technology = "advanced-robots-mk2" },
+    { order = "c-a", name = "construction-robot-mk1", health = 200, max_payload_size = 4, speed = 0.12, max_energy_mj = 3, energy_per_move_kj = 5, ingredients = { {"construction-robot", 2},{"complex-processing-unit", 7} }, technology = "advanced-robots-mk1" },
+    { order = "c-b", name = "construction-robot-mk2", health = 300, max_payload_size = 8, speed = 0.24, max_energy_mj = 6, energy_per_move_kj = 5, ingredients = { {"construction-robot-mk1", 2},{"complex-processing-unit", 14} }, technology = "advanced-robots-mk2" },
 }
 
 chests = {
@@ -161,7 +161,7 @@ logistic_containers ={
 
 roboports = {
     { order = "a-a", name = "roboport-mk1", health = 1000, recharging_count = 2, input_MW = 16, buffer_MJ = 400, recharge_minimum_MJ = 80, energy_usage_KW = 100, charging_energy_KW = 2000, logistics_radius = 50, construction_radius = 110, next_upgrade = "roboport-mk2", ingredients = { {"roboport", 2},{"complex-processing-unit", 10} }, technology = "advanced-robots-mk1" },
-    { order = "a-b", name = "roboport-mk2", health = 2000, recharging_count = 4, input_MW = 64, buffer_MJ = 800, recharge_minimum_MJ = 160, energy_usage_KW = 200, charging_energy_KW = 4000, logistics_radius = 100, construction_radius = 220, next_upgrade = "", ingredients = { {"roboport-mk1", 2},{"complex-processing-unit", 20} }, technology = "advanced-robots-mk2" },
+    { order = "a-b", name = "roboport-mk2", health = 1500, recharging_count = 4, input_MW = 64, buffer_MJ = 800, recharge_minimum_MJ = 160, energy_usage_KW = 200, charging_energy_KW = 4000, logistics_radius = 100, construction_radius = 220, next_upgrade = "", ingredients = { {"roboport-mk1", 2},{"complex-processing-unit", 20} }, technology = "advanced-robots-mk2" },
 }
 
 storage_tanks = {
