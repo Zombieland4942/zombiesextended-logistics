@@ -4,7 +4,7 @@ Date: ????
   Changes:
     - Fixed some wording issues in the Locale
     - Added new experimental setting to relocate items into their normal vanilla locations
-    - Updated all items in Core to respect the new setting above
+    - Updated all items in Logistics to respect the new setting above
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 2020-12-17
