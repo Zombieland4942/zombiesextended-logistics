@@ -1,6 +1,6 @@
 
-local entity_base = util.table.deepcopy(data.raw["inserter"]["fast-inserter"])
-local item_base = util.table.deepcopy(data.raw["item"]["fast-inserter"])
+local entity_base = util.table.deepcopy(data.raw["inserter"]["filter-inserter"])
+local item_base = util.table.deepcopy(data.raw["item"]["filter-inserter"])
 
 local subgroup = "ds-inserters"
 
