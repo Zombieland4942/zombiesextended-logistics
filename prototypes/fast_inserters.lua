@@ -2,6 +2,12 @@
 local entity_base = util.table.deepcopy(data.raw["inserter"]["fast-inserter"])
 local item_base = util.table.deepcopy(data.raw["item"]["fast-inserter"])
 
+local subgroup = "ds-inserters"
+
+if settings.startup["zombies-use-seperate-tab"].value == false then
+    subgroup = item_base.subgroup
+end
+
 for x, fast_inserter in pairs(fast_inserters) do
     
     entity = util.table.deepcopy(entity_base)
@@ -29,8 +35,8 @@ for x, fast_inserter in pairs(fast_inserters) do
     item.name = fast_inserter.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. fast_inserter.name .. ".png"
     item.place_result = fast_inserter.name
-    item.order = fast_inserter.order
-    item.subgroup = "ds-inserters"
+    item.order = item.order .. fast_inserter.order
+    item.subgroup = subgroup
 
     table.insert(data.raw["technology"][fast_inserter.technology].effects, { type = "unlock-recipe", recipe = fast_inserter.name })
 

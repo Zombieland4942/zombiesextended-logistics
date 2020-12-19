@@ -2,6 +2,12 @@
 local entity_base = util.table.deepcopy(data.raw["container"]["steel-chest"])
 local item_base = util.table.deepcopy(data.raw["item"]["steel-chest"])
 
+local subgroup = "ds-storage"
+
+if settings.startup["zombies-use-seperate-tab"].value == false then
+    subgroup = item_base.subgroup
+end
+
 for x, chest in pairs(chests) do
     
     entity = util.table.deepcopy(entity_base)
@@ -20,8 +26,8 @@ for x, chest in pairs(chests) do
     item.name = chest.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. chest.name .. ".png"
     item.place_result = chest.name
-    item.order = chest.order
-    item.subgroup = "ds-storage"
+    item.order = item.order .. chest.order
+    item.subgroup = subgroup
     
     data:extend({ entity, item,
     {

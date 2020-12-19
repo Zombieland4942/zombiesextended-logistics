@@ -1,5 +1,6 @@
 
 
+
 for x, logistic_container in pairs(logistic_containers) do
 
     entity = util.table.deepcopy(data.raw["logistic-container"]["logistic-chest-" .. logistic_container.type])
@@ -18,8 +19,11 @@ for x, logistic_container in pairs(logistic_containers) do
     item.name = logistic_container.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. logistic_container.name .. ".png"
     item.place_result = logistic_container.name
-    item.order = logistic_container.order
-    item.subgroup = "ds-robots"
+    item.order = item.order .. logistic_container.order
+
+    if settings.startup["zombies-use-seperate-tab"].value == true then
+        item.subgroup  = "ds-robots"
+    end
 
     table.insert(data.raw["technology"][logistic_container.technology].effects, { type = "unlock-recipe", recipe = logistic_container.name })
 

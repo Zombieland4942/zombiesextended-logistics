@@ -2,6 +2,12 @@
 local entity_base = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
 local item_base = util.table.deepcopy(data.raw["item"]["pipe-to-ground"])
 
+local subgroup = "ds-storage"
+
+if settings.startup["zombies-use-seperate-tab"].value == false then
+    subgroup = item_base.subgroup
+end
+
 for x, pipe_to_ground in pairs(pipe_to_grounds) do
     
     entity = util.table.deepcopy(entity_base)
@@ -27,8 +33,8 @@ for x, pipe_to_ground in pairs(pipe_to_grounds) do
     item.name = pipe_to_ground.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. pipe_to_ground.name .. ".png"
     item.place_result = pipe_to_ground.name
-    item.order = pipe_to_ground.order
-    item.subgroup = "ds-storage"
+    item.order = item.order .. pipe_to_ground.order
+    item.subgroup = subgroup
 
     table.insert(data.raw["technology"][pipe_to_ground.technology].effects, { type = "unlock-recipe", recipe = pipe_to_ground.name })
 

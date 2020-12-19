@@ -2,6 +2,12 @@
 local entity_base = util.table.deepcopy(data.raw["transport-belt"]["express-transport-belt"])
 local item_base = util.table.deepcopy(data.raw["item"]["express-transport-belt"])
 
+local subgroup = "ds-belt"
+
+if settings.startup["zombies-use-seperate-tab"].value == false then
+    subgroup = item_base.subgroup
+end
+
 for x, transport_belt in pairs(transport_belts) do
     
     entity = util.table.deepcopy(entity_base)
@@ -23,8 +29,8 @@ for x, transport_belt in pairs(transport_belts) do
     item.name = transport_belt.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. transport_belt.name .. ".png"
     item.place_result = transport_belt.name
-    item.order = transport_belt.order
-    item.subgroup = "ds-belt"
+    item.order = item.order .. transport_belt.order
+    item.subgroup = subgroup
 
     table.insert(data.raw["technology"][transport_belt.technology].effects, { type = "unlock-recipe", recipe = transport_belt.name })
 

@@ -2,6 +2,12 @@
 local entity_base = util.table.deepcopy(data.raw["fluid-wagon"]["fluid-wagon"])
 local item_base = util.table.deepcopy(data.raw["item-with-entity-data"]["fluid-wagon"])
 
+local subgroup = "ds-trains"
+
+if settings.startup["zombies-use-seperate-tab"].value == false then
+    subgroup = item_base.subgroup
+end
+
 for x, fluid_wagon in pairs(fluid_wagons) do
     
     entity = util.table.deepcopy(entity_base)
@@ -20,8 +26,8 @@ for x, fluid_wagon in pairs(fluid_wagons) do
     item.name = fluid_wagon.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. fluid_wagon.name .. ".png"
     item.place_result = fluid_wagon.name
-    item.order = fluid_wagon.order
-    item.subgroup = "ds-trains"
+    item.order = item.order .. fluid_wagon.order
+    item.subgroup = subgroup
 
     table.insert(data.raw["technology"][fluid_wagon.technology].effects, { type = "unlock-recipe", recipe = fluid_wagon.name })
 

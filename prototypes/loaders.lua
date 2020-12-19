@@ -2,6 +2,12 @@
 local entity_base = util.table.deepcopy(data.raw["loader"]["express-loader"])
 local item_base = util.table.deepcopy(data.raw["item"]["express-loader"])
 
+local subgroup = "ds-belt"
+
+if settings.startup["zombies-use-seperate-tab"].value == false then
+    subgroup = item_base.subgroup
+end
+
 for x, loader in pairs(loaders) do
     
     entity = util.table.deepcopy(entity_base)
@@ -21,8 +27,8 @@ for x, loader in pairs(loaders) do
     item.name = loader.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. loader.name .. ".png"
     item.place_result = loader.name
-    item.order = loader.order
-    item.subgroup = "ds-belt"
+    item.order = item.order .. loader.order
+    item.subgroup = subgroup
 
     data:extend({ entity, item })
 end

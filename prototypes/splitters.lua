@@ -2,6 +2,11 @@
 local entity_base = util.table.deepcopy(data.raw["splitter"]["express-splitter"])
 local item_base = util.table.deepcopy(data.raw["item"]["express-splitter"])
 
+local subgroup = "ds-belt"
+
+if settings.startup["zombies-use-seperate-tab"].value == false then
+    subgroup = item_base.subgroup
+end
 for x, splitter in pairs(splitters) do
     
     entity = util.table.deepcopy(entity_base)
@@ -35,8 +40,8 @@ for x, splitter in pairs(splitters) do
     item.name = splitter.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. splitter.name .. ".png"
     item.place_result = splitter.name
-    item.order = splitter.order
-    item.subgroup = "ds-belt"
+    item.order = item.order .. splitter.order
+    item.subgroup = subgroup
     
     table.insert(data.raw["technology"][splitter.technology].effects, { type = "unlock-recipe", recipe = splitter.name })
 

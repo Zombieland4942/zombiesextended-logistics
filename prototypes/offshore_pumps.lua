@@ -2,6 +2,12 @@
 local entity_base = util.table.deepcopy(data.raw["offshore-pump"]["offshore-pump"])
 local item_base = util.table.deepcopy(data.raw["item"]["offshore-pump"])
 
+local subgroup = "ds-extraction"
+
+if settings.startup["zombies-use-seperate-tab"].value == false then
+    subgroup = item_base.subgroup
+end
+
 for x, offshore_pump in pairs(offshore_pumps) do
     
     entity = util.table.deepcopy(entity_base)
@@ -26,8 +32,8 @@ for x, offshore_pump in pairs(offshore_pumps) do
     item.name = offshore_pump.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. offshore_pump.name .. ".png"
     item.place_result = offshore_pump.name
-    item.order = offshore_pump.order
-    item.subgroup = "ds-extraction"
+    item.order = item.order .. offshore_pump.order
+    item.subgroup = subgroup
 
     table.insert(data.raw["technology"][offshore_pump.technology].effects, { type = "unlock-recipe", recipe = offshore_pump.name })
 

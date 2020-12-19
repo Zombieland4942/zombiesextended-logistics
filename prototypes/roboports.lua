@@ -2,6 +2,12 @@
 local entity_base = util.table.deepcopy(data.raw["roboport"]["roboport"])
 local item_base = util.table.deepcopy(data.raw["item"]["roboport"])
 
+local subgroup = "ds-robotports"
+
+if settings.startup["zombies-use-seperate-tab"].value == false then
+    subgroup = item_base.subgroup
+end
+
 for x, roboport in pairs(roboports) do
     
     entity = util.table.deepcopy(entity_base)
@@ -38,8 +44,8 @@ for x, roboport in pairs(roboports) do
     item.name = roboport.name
     item.icon = "__zombiesextended-logistics__/graphics/icons/" .. roboport.name .. ".png"
     item.place_result = roboport.name
-    item.order = roboport.order
-    item.subgroup = "ds-robotports"
+    item.order = item.order .. roboport.order
+    item.subgroup = subgroup
 
     table.insert(data.raw["technology"][roboport.technology].effects, { type = "unlock-recipe", recipe = roboport.name })
 
