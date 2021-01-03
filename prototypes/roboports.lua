@@ -54,6 +54,7 @@ for x, roboport in pairs(roboports) do
         type = "recipe",
         name = roboport.name,
         enabled = false,
+        energy_required = roboport.craft_time,
         ingredients = roboport.ingredients,
         result = roboport.name
     }})

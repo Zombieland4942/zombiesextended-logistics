@@ -48,6 +48,7 @@ for x, underground_belt in pairs(underground_belts) do
         type = "recipe",
         name = underground_belt.name,
         enabled = false,
+        energy_required = underground_belt.craft_time,
         ingredients = underground_belt.ingredients,
         result = underground_belt.name
     }})

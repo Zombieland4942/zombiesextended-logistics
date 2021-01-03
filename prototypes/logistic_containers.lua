@@ -32,6 +32,7 @@ for x, logistic_container in pairs(logistic_containers) do
         type = "recipe",
         name = logistic_container.name,
         enabled = false,
+        energy_required = logistic_container.craft_time,
         ingredients = logistic_container.ingredients,
         result = logistic_container.name
     }})

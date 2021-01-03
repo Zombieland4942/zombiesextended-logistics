@@ -38,6 +38,7 @@ for x, locomotive in pairs(locomotives) do
         type = "recipe",
         name = locomotive.name,
         enabled = false,
+        energy_required = locomotive.craft_time,
         ingredients = locomotive.ingredients,
         result = locomotive.name
     }})

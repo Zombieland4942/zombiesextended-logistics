@@ -45,6 +45,7 @@ for x, stack_inserter in pairs(stack_inserters) do
         type = "recipe",
         name = stack_inserter.name,
         enabled = false,
+        energy_required = stack_inserter.craft_time,
         ingredients = stack_inserter.ingredients,
         result = stack_inserter.name
     }})

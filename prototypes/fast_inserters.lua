@@ -45,6 +45,7 @@ for x, fast_inserter in pairs(fast_inserters) do
         type = "recipe",
         name = fast_inserter.name,
         enabled = false,
+        energy_required = fast_inserter.craft_time,
         ingredients = fast_inserter.ingredients,
         result = fast_inserter.name
     }})

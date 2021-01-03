@@ -43,6 +43,7 @@ for x, pipe_to_ground in pairs(pipe_to_grounds) do
         type = "recipe",
         name = pipe_to_ground.name,
         enabled = false,
+        energy_required = pipe_to_ground.craft_time,
         ingredients = pipe_to_ground.ingredients,
         result = pipe_to_ground.name,
         result_count = 2

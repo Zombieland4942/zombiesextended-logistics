@@ -42,6 +42,7 @@ for x, offshore_pump in pairs(offshore_pumps) do
         type = "recipe",
         name = offshore_pump.name,
         enabled = false,
+        energy_required = offshore_pump.craft_time,
         ingredients = offshore_pump.ingredients,
         result = offshore_pump.name
     }})

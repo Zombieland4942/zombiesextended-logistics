@@ -69,6 +69,7 @@ for x, pipe in pairs(pipes) do
         type = "recipe",
         name = pipe.name,
         enabled = false,
+        energy_required = pipe.craft_time,
         ingredients = pipe.ingredients,
         result = pipe.name
     }})

@@ -36,6 +36,7 @@ for x, storage_tank in pairs(storage_tanks) do
         type = "recipe",
         name = storage_tank.name,
         enabled = false,
+        energy_required = storage_tank.craft_time,
         ingredients = storage_tank.ingredients,
         result = storage_tank.name
     }})

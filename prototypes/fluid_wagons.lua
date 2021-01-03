@@ -36,6 +36,7 @@ for x, fluid_wagon in pairs(fluid_wagons) do
         type = "recipe",
         name = fluid_wagon.name,
         enabled = false,
+        energy_required = fluid_wagon.craft_time,
         ingredients = fluid_wagon.ingredients,
         result = fluid_wagon.name
     }})

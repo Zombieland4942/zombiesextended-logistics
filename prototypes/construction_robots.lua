@@ -44,6 +44,7 @@ for x, construction_robot in pairs(construction_robots) do
         type = "recipe",
         name = construction_robot.name,
         enabled = false,
+        energy_required = construction_robot.craft_time,
         ingredients = construction_robot.ingredients,
         result = construction_robot.name
     }})

@@ -50,6 +50,7 @@ for x, splitter in pairs(splitters) do
         type = "recipe",
         name = splitter.name,
         enabled = false,
+        energy_required = splitter.craft_time,
         ingredients = splitter.ingredients,
         result = splitter.name
     }})

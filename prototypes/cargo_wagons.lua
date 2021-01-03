@@ -35,7 +35,8 @@ for x, cargo_wagon in pairs(cargo_wagons) do
     {
         type = "recipe",
         name = cargo_wagon.name,
-        enabled = false,
+        enabled = false,        
+        energy_required = cargo_wagon.craft_time,
         ingredients = cargo_wagon.ingredients,
         result = cargo_wagon.name
     }})

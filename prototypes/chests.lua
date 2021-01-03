@@ -34,6 +34,7 @@ for x, chest in pairs(chests) do
         type = "recipe",
         name = chest.name,
         enabled = true,
+        energy_required = chest.craft_time,
         ingredients = chest.ingredients,
         result = chest.name
     }})

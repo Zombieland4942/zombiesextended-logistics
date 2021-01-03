@@ -39,6 +39,7 @@ for x, transport_belt in pairs(transport_belts) do
         type = "recipe",
         name = transport_belt.name,
         enabled = false,
+        energy_required = transport_belt.craft_time,
         ingredients = transport_belt.ingredients,
         result = transport_belt.name
     }})
