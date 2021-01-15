@@ -67,8 +67,8 @@ data.raw["pipe-to-ground"]["pipe-to-ground"].fast_replaceable_group = "pipe"
 data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "pipe-to-ground-mk1"
 
 transport_belts = {
-    { order = "a", name = "transport-belt-mk1", health = 200, speed = 0.125, next_upgrade = "transport-belt-mk2", craft_time = mk1_craft_time, ingredients = { {"express-transport-belt", 2},{"vibranium-plate", 2} }, technology = "high-teir-logistics-mk1" },
-    { order = "b", name = "transport-belt-mk2", health = 230, speed = 0.1875, next_upgrade = "", craft_time = mk2_craft_time, ingredients = { {"transport-belt-mk1", 2},{"vibranium-plate", 5} }, technology = "high-teir-logistics-mk2" },
+    { order = "a", name = "transport-belt-mk1", health = 200, speed = 0.125, next_upgrade = "transport-belt-mk2", related_underground_belt = "underground-belt-mk1", craft_time = mk1_craft_time, ingredients = { {"express-transport-belt", 2},{"vibranium-plate", 2} }, technology = "high-teir-logistics-mk1" },
+    { order = "b", name = "transport-belt-mk2", health = 230, speed = 0.1875, next_upgrade = "", craft_time = mk2_craft_time, related_underground_belt = "underground-belt-mk2", ingredients = { {"transport-belt-mk1", 2},{"vibranium-plate", 5} }, technology = "high-teir-logistics-mk2" },
 }
 
 underground_belts = {
